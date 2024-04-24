@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40E5E16A-C260-4F8A-AA84-4F8ACB029B85}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Onti2022_V2</RootNamespace>
+    <AssemblyName>Onti2022 V2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseHelper\DatabaseHelper.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterferenteEco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterferenteEco.Designer.cs">
+      <DependentUpon>InterferenteEco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DeflectorModel.cs" />
+    <Compile Include="Models\HartaModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WhatDirection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WhatDirection.Designer.cs">
+      <DependentUpon>WhatDirection.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterferenteEco.resx">
+      <DependentUpon>InterferenteEco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="WhatDirection.resx">
+      <DependentUpon>WhatDirection.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\trianglus.png" />
+    <None Include="Resources\Wood2.jpeg" />
+    <Content Include="Resurse\Background\Back1.jpg" />
+    <Content Include="Resurse\Background\Back2.jpg" />
+    <Content Include="Resurse\Background\Back3.jpg" />
+    <Content Include="Resurse\Background\Back4.jpg" />
+    <Content Include="Resurse\Background\Back5.jpg" />
+    <Content Include="Resurse\Harta1.txt" />
+    <Content Include="Resurse\Harta2.txt" />
+    <Content Include="Resurse\Harta3.txt" />
+    <Content Include="Resurse\MaterialeReciclabile\Hartie.png" />
+    <Content Include="Resurse\MaterialeReciclabile\Plastic.png" />
+    <Content Include="Resurse\MaterialeReciclabile\Sticla.png" />
+    <Content Include="Resurse\Meduze\Meduza1.png" />
+    <Content Include="Resurse\Meduze\Meduza2.png" />
+    <Content Include="Resurse\Meduze\Meduza3.png" />
+    <Content Include="Resurse\Meduze\Meduza4.png" />
+    <Content Include="Resurse\Robot\Robot.png" />
+    <Content Include="Resurse\Useri.txt" />
+    <Content Include="Resurse\Wood\Wood1.jpg" />
+    <Content Include="Resurse\Wood\Wood2.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
